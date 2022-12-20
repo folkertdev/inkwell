@@ -118,6 +118,12 @@ pub enum AddressSpace {
     Five = 5,
 }
 
+impl Default for AddressSpace {
+    fn default() -> Self {
+        AddressSpace::Zero
+    }
+}
+
 impl TryFrom<u32> for AddressSpace {
     type Error = ();
 
